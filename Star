@@ -1,0 +1,31 @@
+//Sanskriti Timseena
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Star extends Circle 
+{
+	int x = (int) ((Math.random() * 1000 ) + 1) ;
+	int y = (int) ((Math.random() * 1000 ) + 1) ;
+	public Star(Point center, int radius) 
+	{
+		super(center, radius);
+	}
+
+
+	@Override
+	public void paint(Graphics brush, Color color) 
+	{
+		brush.setColor(color);
+		brush.drawOval(x, y, 2, 2);
+		brush.fillOval(x, y, 2, 2);
+	}
+
+	@Override
+	public void move() 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}
